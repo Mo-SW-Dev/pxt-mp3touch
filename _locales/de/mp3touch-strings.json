@@ -9,5 +9,8 @@
 	"mp3touch.playLoop|block": "Spiele in Schleife",
 	"mp3touch.setVolume|block": "Setzte die Lautstärke auf | %volume",
 	"mp3touch.increaseVolume|block": "Erhöhe die Lautstärke",
-	"mp3touch.decreaseVolume|block": "Verringere die Lautstärke"
+	"mp3touch.decreaseVolume|block": "Verringere die Lautstärke",
+	
+	"mp3touch.init|block": "initialisiere den Grove I2C Touch Sensor",
+	"mp3touch.touchedFeeler|block": "lese Fühlernummer"
 }
