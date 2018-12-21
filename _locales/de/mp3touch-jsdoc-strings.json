@@ -9,5 +9,8 @@
 	"mp3touch.playLoop": "Spielt alle mp3 Dateien in einer Schleife",
 	"mp3touch.setVolume": "Setzt die Lautstärke auf einen Wert, der maximal 30 sein darf",
 	"mp3touch.increaseVolume": "Erhöht die Lautstärke",
-	"mp3touch.decreaseVolume": "Verringert die Lautstärke"
+	"mp3touch.decreaseVolume": "Verringert die Lautstärke",
+	
+	"grove_mpr121.init": "initialisiere den Touch Sensor",
+	"grove_mpr121.touchedFeeler": "lese Fühlernummer"
 }
