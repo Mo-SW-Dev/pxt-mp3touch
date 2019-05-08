@@ -12,5 +12,6 @@
 	"mp3touch.decreaseVolume|block": "Verringere die Lautstärke",
 	
 	"mp3touch.init|block": "initialisiere den Grove I2C Touch Sensor",
-	"mp3touch.touchedFeeler|block": "lese Fühlernummer"
+	"mp3touch.touchedFeeler|block": "lese Fühlernummer",
+	"mp3touch.setThreshold|block": "setze Empfindlichkeit auf | %threshold"
 }
