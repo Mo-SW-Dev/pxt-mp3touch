@@ -305,6 +305,31 @@ namespace mp3touch {
         }
     }   
 
+    /**
+     * Set threshold.
+     */
+    //% weight=208
+    //% blockId=grove_mpr121_threshold block="set threshold"
+    //% parts="grove_mpr121"
+    export function setThreshold(threshold: number): void {
+	    if(threshold < 0){
+		    threshold = 0;
+	    }
+	    if(threshold > 249){
+		    threshold = 249;
+	    }
+	    let regval: number[] = [0x4100 + threshold, 0x4200 + threshold + 6, 0x4300 + threshold, 0x4400 + threshold + 6,
+				    0x4500 + threshold, 0x4600 + threshold + 6, 0x4700 + threshold, 0x4800 + threshold + 6,
+                                    0x4900 + threshold, 0x4A00 + threshold + 6, 0x4B00 + threshold, 0x4C00 + threshold + 6,
+				    0x4D00 + threshold, 0x4E00 + threshold + 6, 0x4F00 + threshold, 0x5000 + threshold + 6,
+                                    0x5100 + threshold, 0x5200 + threshold + 6, 0x5300 + threshold, 0x5400 + threshold + 6,
+				    0x5500 + threshold, 0x5600 + threshold + 6, 0x5700 + threshold, 0x5800 + threshold + 6]
+							 
+        for (let i = 0; i < regval.length; i++) {
+			pins.i2cWriteNumber(ADDRESS, regval[i], NumberFormat.UInt16BE)
+        }
+    }   
+	
 	
     /**
      * Return touched feeler.
