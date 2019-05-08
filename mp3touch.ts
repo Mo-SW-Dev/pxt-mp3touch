@@ -309,7 +309,7 @@ namespace mp3touch {
      * Set threshold.
      */
     //% weight=208
-    //% blockId=grove_mpr121_threshold block="set threshold"
+    //% blockId=grove_mpr121_threshold block="set threshold to | %threshold"
     //% parts="grove_mpr121"
     export function setThreshold(threshold: number): void {
 	    if(threshold < 0){
