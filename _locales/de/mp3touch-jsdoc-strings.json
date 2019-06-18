@@ -13,5 +13,5 @@
 	
 	"grove_mpr121.init": "initialisiere den Touch Sensor",
 	"grove_mpr121.touchedFeeler": "lese Fühlernummer",
-	"grove_mpr121.setTheshold": "Setzt die Empfindlichkeit der Fühler"
+	"grove_mpr121.touchedFeelers": "lese berührte Fühlernummern"
 }

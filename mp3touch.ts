@@ -303,33 +303,7 @@ namespace mp3touch {
         for (let i = 0; i < regval.length; i++) {
 			pins.i2cWriteNumber(ADDRESS, regval[i], NumberFormat.UInt16BE)
         }
-    }   
-
-    /**
-     * Set threshold.
-     */
-    //% weight=208
-    //% blockId=grove_mpr121_threshold block="set threshold to | %threshold"
-    //% parts="grove_mpr121"
-    export function setThreshold(threshold: number): void {
-	    if(threshold < 0){
-		    threshold = 0;
-	    }
-	    if(threshold > 249){
-		    threshold = 249;
-	    }
-        let regval: number[] = [0x5E00, 0x4100 + threshold, 0x4200 + threshold + 6, 0x4300 + threshold, 0x4400 + threshold + 6,
-                                0x4500 + threshold, 0x4600 + threshold + 6, 0x4700 + threshold, 0x4800 + threshold + 6,
-                                0x4900 + threshold, 0x4A00 + threshold + 6, 0x4B00 + threshold, 0x4C00 + threshold + 6,
-				    0x4D00 + threshold, 0x4E00 + threshold + 6, 0x4F00 + threshold, 0x5000 + threshold + 6,
-                                    0x5100 + threshold, 0x5200 + threshold + 6, 0x5300 + threshold, 0x5400 + threshold + 6,
-                    0x5500 + threshold, 0x5600 + threshold + 6, 0x5700 + threshold, 0x5800 + threshold + 6, 0x5E8F]
-                    
-        for (let i = 0; i < regval.length; i++) {
-			pins.i2cWriteNumber(ADDRESS, regval[i], NumberFormat.UInt16BE)
-        }
-    }   
-	
+    }
 	
     /**
      * Return touched feeler.
@@ -347,5 +321,16 @@ namespace mp3touch {
 			return feeler.indexOf(result); // multiple feelers touched: -1
 		}
         //return pins.i2cReadNumber(ADDRESS, NumberFormat.UInt16BE);		
+    }
+	
+	    /**
+     * Return touched feeler.
+     */
+    //% weight=211
+    //% blockId=grove_mpr121_feeler block="read feelers"
+    //% parts="grove_mpr121"
+    export function touchedFeelers(): number {
+		pins.i2cWriteNumber(ADDRESS, 0x0000, NumberFormat.UInt16BE)
+        return pins.i2cReadNumber(ADDRESS, NumberFormat.UInt16BE);		
     }
 }
