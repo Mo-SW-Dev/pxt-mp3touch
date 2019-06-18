@@ -327,7 +327,7 @@ namespace mp3touch {
      * Return touched feeler.
      */
     //% weight=211
-    //% blockId=grove_mpr121_feeler block="read feelers"
+    //% blockId=grove_mpr121_feelers block="read feelers"
     //% parts="grove_mpr121"
     export function touchedFeelers(): number {
 		pins.i2cWriteNumber(ADDRESS, 0x0000, NumberFormat.UInt16BE)
